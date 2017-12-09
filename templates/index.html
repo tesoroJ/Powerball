@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Powerball Numbers</p>
+{% if latest_powerball %}
+    <ul>
+    {% for pb in latest_powerball %}
+        <li>{{ pb.ball_1 }}</li>
+        <li>{{ pb.ball_2 }}</li>
+        <li>{{ pb.ball_3 }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No powerball are available.</p>
+{% endif %}
+</body>
+</html>
